@@ -18,26 +18,26 @@ function setup() {
 	createCanvas(800, 700);
 
 
-	engine = Engine.create();
-	world = engine.world;
+	Engine = Engine.create();
+	World = Engine.world;
 	
 //Crie os Corpos Aqui.
 var plane_options={
 isStatic: true
 }
-var block1_Options={
+var Block1_Options={
   restitution:0.5,
   friction:0.02,
   frictionAir:0
 }
 
-var block2_Options={
+var Block2_Options={
 restitution:0.7,
 friction:0.01,
 frictionAir:0.1
 }
 
-var block3_Options={
+var Block3_Options={
   restitution:0.01,
   friction:1,
   frictionAir:0.3
@@ -45,16 +45,16 @@ var block3_Options={
 
 
 
-block1=Bodies.circle(220,10,10,block1_Options);
-World.add(world,block1)	
+  Block1=Bodies.circle(220,10,10,Block1_Options);
+World.add(World,Block1)	
 
-block2=Bodies.rectangle(110,50,10,10,block2_Options)
-World.add(world,block2)
+  Block2=Bodies.rectangle(110,50,10,10,Block2_Options)
+World.add(World,Block2)
 
-block3=Bodies.rectangle(350,50,10,10,block3_option)
-World.add(world,block3)
+  Block3=Bodies.rectangle(350,50,10,10,Block3_Options)
+World.add(World,Block3)
 solo=Bodies.rectangle(400,2,800,2,plane_options)
-World.add(world,solo)
+World.add(World,solo)
 
 
 
@@ -66,11 +66,11 @@ World.add(world,solo)
 
 }
 function draw() {
-  rectMode(CENTER);
-  background(0);
+  background(lightblue);
   
   drawSprites();
- rect(solo.position.x,solo.position.y,800,2)
+ rect(solo.position.x,solo.position.y,800,-2)
+ rectMode(CENTER); 
 }
 
 
