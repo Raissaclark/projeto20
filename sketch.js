@@ -67,6 +67,7 @@ World.add(world,solo)
 }
 function draw() {
   background("lightblue");
+  Engine.update(engine)
   rectMode(CENTER)
   drawSprites();
  rect(solo.position.x,solo.position.y,800,2)
